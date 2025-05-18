@@ -1,16 +1,18 @@
+import React from "react";
+import Timeline from "../components/Timeline";
+import Mission from "../components/Mission";
+import Story from "../components/Story";
+import GreenBlock from "../components/GreenBlock";
+
 const About = () => {
   return (
-    <div className=" bg-white py-20 text-center">
-      <section className="min-h-[calc(100vh-100px)] mx-auto py-10 max-w-[1200px] flex flex-col gap-2 items-center justify-center">
-        <h2 className="text-4xl font-bold mb-6 text-center text-green-700">
-          Our mission
-        </h2>
-        <p className="text-6xl font-semibold text-gray-800 mb-4">
-          We're making homeownership simpler, faster — and most importantly,
-          more accessible for all Americans.
-        </p>
-      </section>
+    <div className="flex-1 flex flex-col bg-white py-20">
+      <Mission />
+      <Story />
+      <GreenBlock />
+      <Timeline />
     </div>
   );
 };
+
 export default About;

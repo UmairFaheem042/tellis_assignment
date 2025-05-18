@@ -4,7 +4,7 @@ import FAQ from "../components/FAQ";
 
 const Home = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex-1">
       <Hero />
       <Testimonials />
       <FAQ />
