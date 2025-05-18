@@ -16,8 +16,8 @@ A simplified version of a mortgage website built for the Frontend Developer Inte
 ## Setup
 1. Clone the repo: `git clone https://github.com/UmairFaheem042/tellis_assignment.git`
 2. Install dependencies: `npm install`
-3. Run locally: `npm start`
+3. Run locally: `npm run dev`
 
 ## Links
-- Live Site: https://google.com
+- Live Site: https://tellis-assignment-rust.vercel.app
 - GitHub: https://github.com/UmairFaheem042/tellis_assignment.git
