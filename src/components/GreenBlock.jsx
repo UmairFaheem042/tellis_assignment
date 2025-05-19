@@ -3,7 +3,7 @@ import React from "react";
 const GreenBlock = () => {
   return (
     <section className="bg-green-800  my-5 md:my-24 ">
-      <div className="mx-auto max-w-[1100px] px-10 py-20  text-white flex flex-col gap-8 ">
+      <div className="mx-auto max-w-[1100px] md:px-16 md:py-20 px-10 py-20  text-white flex flex-col gap-8 ">
         <h2 className="text-2xl md:text-5xl font-medium">
           How we're changing things
         </h2>

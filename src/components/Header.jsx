@@ -1,36 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 const Header = () => {
-  // State to toggle the mobile menu
   const { pathname } = useLocation();
-  console.log(pathname);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Function to toggle the menu visibility
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
   return (
     <header
       className={`${
-        isMenuOpen ? "min-h-screen" : "h-[80px]"
-      } flex flex-col gap-10 ${
+        isMenuOpen ? "min-h-screen pt-6" : "h-[80px]"
+      } flex flex-col justify-center gap-10 z-[999] sticky top-0 left-0 w-full ${
         pathname === "/" ? "bg-green-800 text-white" : "bg-white text-black"
-      }  p-4 ${pathname === '/start' && "hidden"}`}
+      }  p-4 ${pathname === "/start" && "hidden"}`}
     >
       <nav className="max-w-[1400px] mx-auto w-full flex items-center justify-between px-6 sm:px-10">
         {/* Logo and Continue Button visible on all screen sizes */}
-        <div className="flex gap-10 items-center w-full justify-between">
+        <div className="flex items-center w-full justify-between">
           <div className="flex items-center justify-center gap-10">
             <NavLink to="/" className="text-2xl font-bold">
               Better
             </NavLink>
 
             {/* Desktop Menu Items */}
-            <ul className="hidden sm:flex gap-5 text-md">
+            <ul className="hidden md:flex gap-5 text-md">
               <li>
                 <NavLink
                   to="/about"
@@ -38,7 +39,7 @@ const Header = () => {
                     pathname === "/"
                       ? "hover:bg-white hover:text-black"
                       : "hover:bg-gray-100 hover:text-black"
-                  } transition-all  px-6 py-3 rounded-full`}
+                  } transition-all  px-0 lg:px-6 py-3 rounded-full`}
                 >
                   About Us
                 </NavLink>
@@ -50,7 +51,7 @@ const Header = () => {
                     pathname === "/"
                       ? "hover:bg-white hover:text-black"
                       : "hover:bg-gray-100 hover:text-black"
-                  } transition-all  px-6 py-3 rounded-full`}
+                  } transition-all  px-0 lg:px-6 py-3 rounded-full`}
                 >
                   Mortgage Calculator
                 </NavLink>
@@ -62,7 +63,7 @@ const Header = () => {
                     pathname === "/"
                       ? "hover:bg-white hover:text-black"
                       : "hover:bg-gray-100 hover:text-black"
-                  } transition-all  px-6 py-3 rounded-full`}
+                  } transition-all  px-0 lg:px-6 py-3 rounded-full`}
                 >
                   Start Page
                 </NavLink>
@@ -71,13 +72,13 @@ const Header = () => {
           </div>
 
           {/* Mobile Contact and Auth Links */}
-          <ul className="hidden sm:flex items-center gap-5 space-x-4">
+          <ul className="hidden md:flex items-center gap-5 space-x-4">
             <li
               className={`cursor-pointer transition-all ${
                 pathname === "/"
                   ? "hover:bg-white hover:text-black"
                   : "hover:bg-gray-100 hover:text-black"
-              } rounded-full border-2 p-2 border-[rgba(255,255,255,0.4)]`}
+              } rounded-full border-2 p-2 hidden lg:block border-[rgba(255,255,255,0.4)]`}
             >
               📞
             </li>
@@ -88,7 +89,7 @@ const Header = () => {
                   pathname === "/"
                     ? "hover:bg-white hover:text-black"
                     : "hover:bg-gray-100 hover:text-black"
-                } transition-all  px-6 py-3 rounded-full`}
+                } transition-all  px-6 py-3 hidden lg:block  rounded-full`}
               >
                 Sign In
               </NavLink>
@@ -105,12 +106,12 @@ const Header = () => {
           </ul>
 
           {/* Mobile Hamburger Menu */}
-          <div className="sm:hidden flex items-center">
+          <div className="md:hidden flex items-center ">
             <button
               onClick={toggleMenu}
               className={`${
                 pathname === "/" ? "text-white" : "text-black"
-              } text-3xl`}
+              } text-3xl cursor-pointer`}
             >
               {isMenuOpen ? "×" : "☰"}
             </button>
@@ -120,9 +121,9 @@ const Header = () => {
 
       {/* Mobile Menu Links (only visible when isMenuOpen is true) */}
       <div
-        className={`sm:hidden ${isMenuOpen ? "flex" : "hidden"} ${
+        className={`md:hidden ${isMenuOpen ? "flex" : "hidden"} ${
           pathname === "/" ? "bg-green-800" : "bg-white"
-        } flex-1 items-center justify-center w-full px-6 py-4`}
+        } flex-1 items-center justify-center w-full px-6 py-4 `}
       >
         <ul className="flex flex-1 flex-col items-center gap-10 text-md">
           <li>

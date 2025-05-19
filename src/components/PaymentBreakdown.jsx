@@ -35,7 +35,7 @@ const PaymentBreakdown = () => {
   ];
 
   return (
-    <section className="py-12 px-6 md:px-10 sm:py-16">
+    <section className="md:px-16 md:py-20 px-10 py-20">
       <div className="max-w-[1200px] mx-auto grid gap-12 lg:gap-16 md:grid-cols-2">
         {/* ───────── Left column ───────── */}
         <div>
@@ -85,11 +85,11 @@ const PaymentBreakdown = () => {
             </React.Fragment>
           ))}
 
-          {/* keep grid shape + CTA */}
-          <div />
-          <button className="cursor-pointer bg-green-50 hover:bg-green-100 py-3 sm:py-4 px-6 sm:px-8 rounded-lg font-medium">
-            Copy estimate link
-          </button>
+          <div className="col-span-2 flex items-center justify-center">
+            <button className="cursor-pointer bg-green-50 hover:bg-green-100 py-3 sm:py-4 px-6 sm:px-8 rounded-lg font-medium">
+              Copy estimate link
+            </button>
+          </div>
         </div>
       </div>
     </section>

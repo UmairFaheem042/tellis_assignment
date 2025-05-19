@@ -1,11 +1,16 @@
+import { useEffect } from "react";
 import CalculatorForm from "../components/CalculatorForm";
 import PaymentBreakdown from "../components/PaymentBreakdown";
 
 const Calculator = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div>
+    <div className="">
       <CalculatorForm />
-      <PaymentBreakdown/>
+      <PaymentBreakdown />
     </div>
   );
 };

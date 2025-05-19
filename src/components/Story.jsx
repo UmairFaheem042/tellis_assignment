@@ -1,9 +1,6 @@
-import React from "react";
-
 const Story = () => {
   return (
-    <section className="mx-auto max-w-[1200px] my-5 md:my-24 px-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      {/* Text side */}
+    <section className="mx-auto max-w-[1200px] my-5 md:my-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center md:px-16 md:py-20 px-10 py-20">
       <div>
         <h3 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900">
           The status quo is broken
@@ -22,14 +19,12 @@ const Story = () => {
         </button>
       </div>
 
-      {/* Video thumbnail side */}
       <div className="relative w-full aspect-[16/9]">
         <img
-          src="https://i.imgur.com/JxBrx4o.jpg" // replace with the actual frame you want
+          src="https://i.imgur.com/JxBrx4o.jpg"
           alt="Vishal Garg speaking in an office"
           className="w-full h-full object-cover rounded-lg"
         />
-        {/* Play button overlay */}
         <button
           aria-label="Play video"
           className="absolute inset-0 flex items-center justify-center"

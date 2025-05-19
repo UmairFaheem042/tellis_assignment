@@ -7,24 +7,30 @@ import {
 import React from "react";
 
 const CalculatorForm = () => {
-  const dispatch     = useDispatch();
-  const form         = useSelector(selectForm);
-  const grandTotal   = useSelector(selectTotalMonthly);
+  const dispatch = useDispatch();
+  const form = useSelector(selectForm);
+  const grandTotal = useSelector(selectTotalMonthly);
 
   // handy change handler factory
-  const onChange = (key, isNum = true) => (e) =>
-    dispatch(updateField({ key, value: isNum ? +e.target.value : e.target.value }));
+  const onChange =
+    (key, isNum = true) =>
+    (e) =>
+      dispatch(
+        updateField({ key, value: isNum ? +e.target.value : e.target.value })
+      );
 
   return (
     // <section className="bg-green-50 py-20 px-6">
-    <section className="bg-green-50 py-12 sm:py-16 lg:py-20 px-6 sm:px-6">
+    <section className="bg-gray-100 md:px-16 md:py-20 px-10 py-20">
       <div className="max-w-[1300px] mx-auto">
         {/* <h2 className="text-5xl font-medium mb-4">Mortgage calculator</h2> */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium mb-4">Mortgage calculator</h2>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium mb-4">
+          Mortgage calculator
+        </h2>
         <p className="max-w-3xl mb-10 sm:mb-12 text-sm sm:text-base text-gray-500">
-          Our mortgage calculator includes key factors like homeowners association
-          fees, property taxes, and private mortgage insurance (PMI). Get the whole
-          picture and calculate your total monthly payment.
+          Our mortgage calculator includes key factors like homeowners
+          association fees, property taxes, and private mortgage insurance
+          (PMI). Get the whole picture and calculate your total monthly payment.
         </p>
 
         {/* ───────── Top row ───────── */}
@@ -42,10 +48,15 @@ const CalculatorForm = () => {
 
           {/* ALL‑IN monthly payment */}
           <div className="space-y-2">
-            <label className="block font-semibold text-lg">Monthly payment</label>
+            <label className="block font-semibold text-lg">
+              Monthly payment
+            </label>
             <p className="text-3xl sm:text-4xl font-semibold">
-              ${grandTotal.toLocaleString(undefined,{maximumFractionDigits:2})}/
-              <span className="text-xl font-normal">mo</span>
+              $
+              {grandTotal.toLocaleString(undefined, {
+                maximumFractionDigits: 2,
+              })}
+              /<span className="text-xl font-normal">mo</span>
             </p>
           </div>
 
@@ -101,7 +112,9 @@ const CalculatorForm = () => {
             />
           </div>
           <div>
-            <label className="block font-semibold mb-2">Length of loan (years)</label>
+            <label className="block font-semibold mb-2">
+              Length of loan (years)
+            </label>
             <select
               value={form.years}
               onChange={onChange("years")}

@@ -24,10 +24,8 @@ const Testimonials = () => {
   const { img, text, name } = testimonials[current];
 
   return (
-    <section className="flex flex-col-reverse md:flex-row gap-5 md:gap-40 mx-auto max-w-[1200px] w-full p-10">
-      {/* Left side: Testimonials */}
+    <section className="flex my-10 flex-col-reverse md:flex-row gap-5 md:gap-40 mx-auto max-w-[1200px] w-full md:px-16 md:py-20 px-10 py-20">
       <div className="flex flex-col gap-4 h-[500px] md:h-auto">
-        {/* Testimonial Card */}
         <div
           style={{
             backgroundImage: `url('${img}')`,
@@ -44,7 +42,6 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Buttons */}
         <div className="flex gap-2 items-center justify-between">
           {Object.keys(testimonials).map((person) => (
             <button
@@ -62,19 +59,18 @@ const Testimonials = () => {
         </div>
       </div>
 
-      {/* Right side: Title, CTA Button, Trustpilot Rating */}
       <div className="flex-1 flex items-center p-5 md:min-h-[calc(100vh-40px)]">
         <div className="flex flex-col items-center md:items-start gap-4 w-full">
-          <h1 className="text-6xl md:text-8xl text-center md:text-start font-bold mb-4 text-gray-900">
+          <h1 className="text-4xl sm:text-6xl md:text-[5rem] text-center md:text-start  font-bold mb-4 text-gray-900">
             Find out why <br />
             we're better
           </h1>
           <div className="w-full flex justify-center md:justify-start">
-            <button className="bg-green-800 px-6 py-3 font-semibold rounded-lg text-white text-lg cursor-pointer hover:bg-green-900">
+            <button className="bg-green-800 px-6 py-3 font-semibold rounded-lg text-white text-sm sm:text-[1rem]  md:text-lg cursor-pointer hover:bg-green-900">
               See all our stories
             </button>
           </div>
-          <p className="font-semibold text-lg">
+          <p className="font-semibold  md:text-lg text-center ">
             ⭐ Trustpilot Excellent 4.4{" "}
             <span className="font-thin">out of 5</span>
           </p>

@@ -3,9 +3,9 @@ import googleImg from "../assets/google.svg";
 
 const Hero = () => {
   return (
-    <section className="bg-green-800 py-20 text-center relative">
-      <div className="max-w-[800px] w-full mt-10 container mx-auto flex flex-col gap-20 relative ">
-        <h2 className="z-[100] text-9xl font-bold text-lime-400 mb-4">
+    <section className="py-20 bg-green-800  text-center relative">
+      <div className="max-w-[800px] w-full mt-10 container mx-auto flex flex-col gap-20 px-6 md:px-2 relative ">
+        <h2 className="z-[100] text-6xl md:text-9xl font-bold text-lime-400 mb-4">
           Mortgages <br />
           made simple
         </h2>
@@ -13,10 +13,10 @@ const Hero = () => {
         <img
           src={heroImg}
           alt="Hero image"
-          className="absolute left-1/2 bottom-0 transform -translate-x-1/2 w-[400px]"
+          className="absolute left-1/2 top-[-17.6%] md:top-[-1.5%]  transform -translate-x-1/2 w-[400px]"
         />
 
-        <div className="z-[100] flex justify-between items-center">
+        <div className="z-[100] flex md:flex-row flex-col md:gap-0 gap-4 justify-between items-center ">
           <div className="flex flex-col gap-2">
             <button className="bg-green-400 text-black px-8 py-4 font-bold rounded-full">
               Start my approval

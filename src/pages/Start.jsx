@@ -1,5 +1,4 @@
-import React from "react";
-
+import { useEffect } from "react";
 import {
   Home,
   Link as Refi,
@@ -11,6 +10,10 @@ import {
 } from "lucide-react";
 
 const Start = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col items-center px-4 pb-24">
       <header className="w-full max-w-[1300px] flex items-center justify-between py-4 px-8 border-b-2 border-green-100 gap-4">
