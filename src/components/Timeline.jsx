@@ -28,7 +28,7 @@ const Timeline = () => {
                 </div>
 
                 <div className="md:order-2 flex-shrink-0 z-10">
-                  <span className="block bg-green-700 text-white font-semibold px-8 py-4 rounded-full text-xl">
+                  <span className="block bg-green-700 text-white font-medium px-8 py-4 rounded-full text-xl">
                     {year}
                   </span>
                 </div>

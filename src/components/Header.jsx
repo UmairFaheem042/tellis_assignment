@@ -99,7 +99,7 @@ const Header = () => {
                 pathname === "/"
                   ? "hover:bg-transparent hover:text-white bg-green-400"
                   : "bg-green-600 hover:bg-green-900 text-white"
-              } transition-all  px-6 py-3 rounded-full`}
+              } transition-all  px-6 py-3 rounded-full font-medium`}
             >
               <NavLink to={"/"}>Continue</NavLink>
             </li>

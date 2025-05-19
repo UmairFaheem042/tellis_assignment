@@ -18,7 +18,7 @@ const Hero = () => {
 
         <div className="z-[100] flex md:flex-row flex-col md:gap-0 gap-4 justify-between items-center ">
           <div className="flex flex-col gap-2">
-            <button className="bg-green-400 text-black px-8 py-4 font-bold rounded-full">
+            <button className="bg-green-400 text-black px-8 py-4 font-medium rounded-full">
               Start my approval
             </button>
             <p className="text-sm text-white font-thin">

@@ -49,7 +49,7 @@ const Testimonials = () => {
               onClick={() => setCurrent(person)}
               className={`p-2 rounded-full flex-1 cursor-pointer ${
                 current === person
-                  ? "border-3 border-green-800 text-green-800 font-semibold"
+                  ? "border-3 border-green-800 text-green-800 font-medium"
                   : "border border-gray-300"
               }`}
             >
@@ -66,7 +66,7 @@ const Testimonials = () => {
             we're better
           </h1>
           <div className="w-full flex justify-center md:justify-start">
-            <button className="bg-green-800 px-6 py-3 font-semibold rounded-lg text-white text-sm sm:text-[1rem]  md:text-lg cursor-pointer hover:bg-green-900">
+            <button className="bg-green-800 px-6 py-3 font-medium rounded-lg text-white text-sm sm:text-[1rem]  md:text-lg cursor-pointer hover:bg-green-900">
               See all our stories
             </button>
           </div>

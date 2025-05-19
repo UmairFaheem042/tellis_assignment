@@ -10,13 +10,13 @@ const FAQ = () => {
         </h1>
 
         <div className="flex-1 flex flex-col justify-end md:flex-row gap-4 md:gap-5 w-full">
-          <button className="cursor-pointer border-3 border-green-800 text-green-800 font-semibold px-4 py-2 rounded-full ">
+          <button className="cursor-pointer border-3 border-green-800 text-green-800 font-medium px-4 py-2 rounded-full ">
             Our Products
           </button>
-          <button className="cursor-pointer border border-gray-300 px-4 py-2 rounded-full ">
+          <button className="cursor-pointer border border-gray-300 px-4 py-2 rounded-full">
             Calculators
           </button>
-          <button className="cursor-pointer border border-gray-300 px-4 py-2 rounded-full ">
+          <button className="cursor-pointer border border-gray-300 px-4 py-2 rounded-full">
             Guides & FAQs
           </button>
         </div>

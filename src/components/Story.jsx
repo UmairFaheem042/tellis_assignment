@@ -14,7 +14,7 @@ const Story = () => {
           not you. Better.com CEO, Vishal Garg, set out to change that.
         </p>
 
-        <button className="bg-green-800 hover:bg-green-900 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-colors duration-200">
+        <button className="bg-green-800 hover:bg-green-900 text-white font-medium py-4 px-8 rounded-lg text-lg transition-colors duration-200">
           Read Vishal's story
         </button>
       </div>

@@ -37,7 +37,6 @@ const PaymentBreakdown = () => {
   return (
     <section className="md:px-16 md:py-20 px-10 py-20">
       <div className="max-w-[1200px] mx-auto grid gap-12 lg:gap-16 md:grid-cols-2">
-        {/* ───────── Left column ───────── */}
         <div>
           <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">
             Monthly payment breakdown
@@ -45,8 +44,6 @@ const PaymentBreakdown = () => {
           <p className="text-3xl sm:text-4xl font-bold mb-8 sm:mb-10">
             ${fmt(grandTot)}/mo
           </p>
-
-          {/* stacked bar */}
           <div className="flex h-14 sm:h-20 rounded-full overflow-hidden">
             {slices.map(({ key, value }) => (
               <div
@@ -58,17 +55,14 @@ const PaymentBreakdown = () => {
           </div>
         </div>
 
-        {/* ───────── Right column ───────── */}
         <div className="grid grid-cols-[1fr_auto] gap-y-6 sm:gap-y-8 gap-x-6 sm:gap-x-8 items-center">
           {slices.map(({ key, label, value }) => (
             <React.Fragment key={key}>
-              {/* legend */}
               <div className="flex items-center gap-4">
                 <span className={`w-1.5 h-6 ${colors[key]} rounded-sm`} />
                 <span className="text-lg">{label}</span>
               </div>
 
-              {/* value or editable input */}
               {key === "principal" ? (
                 <span className="text-xl sm:text-2xl font-semibold">
                   ${fmt(value)}

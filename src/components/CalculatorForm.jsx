@@ -20,10 +20,8 @@ const CalculatorForm = () => {
       );
 
   return (
-    // <section className="bg-green-50 py-20 px-6">
     <section className="bg-gray-100 md:px-16 md:py-20 px-10 py-20">
       <div className="max-w-[1300px] mx-auto">
-        {/* <h2 className="text-5xl font-medium mb-4">Mortgage calculator</h2> */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium mb-4">
           Mortgage calculator
         </h2>
@@ -33,9 +31,7 @@ const CalculatorForm = () => {
           (PMI). Get the whole picture and calculate your total monthly payment.
         </p>
 
-        {/* ───────── Top row ───────── */}
         <div className="grid md:grid-cols-3 gap-8 items-end">
-          {/* Home price */}
           <div className="space-y-2">
             <label className="block font-semibold text-lg">Home price</label>
             <input
@@ -46,7 +42,6 @@ const CalculatorForm = () => {
             />
           </div>
 
-          {/* ALL‑IN monthly payment */}
           <div className="space-y-2">
             <label className="block font-semibold text-lg">
               Monthly payment
@@ -60,16 +55,13 @@ const CalculatorForm = () => {
             </p>
           </div>
 
-          {/* CTA */}
           <div className="md:justify-self-end">
-            <button className="bg-green-700 hover:bg-green-900 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg mt-6 sm:mt-8 md:mt-0">
+            <button className="bg-green-700 hover:bg-green-900 text-white font-medium cursor-pointer py-3 sm:py-4 px-6 sm:px-8 rounded-lg mt-6 sm:mt-8 md:mt-0">
               Get pre‑approved
             </button>
           </div>
         </div>
 
-        {/* slider (price) */}
-        {/* <div className="my-10"> */}
         <div className="my-8 sm:my-10">
           <input
             type="range"
@@ -82,7 +74,6 @@ const CalculatorForm = () => {
           />
         </div>
 
-        {/* second row */}
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <label className="block font-semibold mb-2">ZIP code</label>
